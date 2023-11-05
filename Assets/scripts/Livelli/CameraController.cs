@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-    public class CameraControlloer : MonoBehaviour
+public class CameraControlloer : MonoBehaviour
 {
     [SerializeField] private Transform Personaggio;
 
-    [SerializeField ]private bool seguiAsseX = false;
+    [SerializeField] private bool seguiAsseX = false;
 
     [SerializeField] private float maxY;
     [SerializeField] private float minY;
@@ -15,21 +15,20 @@ using UnityEngine;
 
     private void Update()
     {
-        float posX = seguiAsseX ? Personaggio.position.x : transform.position.x;
+        float posX;
         float posY;
 
         if (seguiAsseX)
         {
-            posY = transform.position.y;
+            posX = Personaggio.position.x;
+            posY = Personaggio.position.y;
         }
         else
         {
+            posX = transform.position.x;
             posY = Mathf.Clamp(Personaggio.position.y, minY, maxY);
         }
 
         transform.position = new Vector3(posX, posY, transform.position.z);
     }
 }
-
-
-

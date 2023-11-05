@@ -30,7 +30,7 @@ public class PlayerLife : MonoBehaviour
         deathSoundEffect.Play();
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death");
-        Timer.elapsedTime += 5.0f;
+        Timer.elapsedTime += 2.5f;
     }
 
     private void RestartLevel()

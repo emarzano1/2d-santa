@@ -67,9 +67,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 0
@@ -253,11 +250,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8513690841786679081, guid: 4ac6e35ca893904418a7418facaa5b37, type: 3}
-      propertyPath: waypoints.Array.data[0]
+      propertyPath: 'waypoints.Array.data[0]'
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8513690841786679081, guid: 4ac6e35ca893904418a7418facaa5b37, type: 3}
-      propertyPath: waypoints.Array.data[1]
+      propertyPath: 'waypoints.Array.data[1]'
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -638,11 +635,11 @@ PrefabInstance:
       value: Saw
       objectReference: {fileID: 0}
     - target: {fileID: 8513690841786679081, guid: 4ac6e35ca893904418a7418facaa5b37, type: 3}
-      propertyPath: waypoints.Array.data[0]
+      propertyPath: 'waypoints.Array.data[0]'
       value: 
       objectReference: {fileID: 1532514477}
     - target: {fileID: 8513690841786679081, guid: 4ac6e35ca893904418a7418facaa5b37, type: 3}
-      propertyPath: waypoints.Array.data[1]
+      propertyPath: 'waypoints.Array.data[1]'
       value: 
       objectReference: {fileID: 948147563}
     m_RemovedComponents: []
@@ -84923,11 +84920,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8513690841786679081, guid: 4ac6e35ca893904418a7418facaa5b37, type: 3}
-      propertyPath: waypoints.Array.data[0]
+      propertyPath: 'waypoints.Array.data[0]'
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8513690841786679081, guid: 4ac6e35ca893904418a7418facaa5b37, type: 3}
-      propertyPath: waypoints.Array.data[1]
+      propertyPath: 'waypoints.Array.data[1]'
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -84952,7 +84949,7 @@ GameObject:
   - component: {fileID: 349247110}
   - component: {fileID: 349247109}
   - component: {fileID: 349247107}
-  - component: {fileID: 349247108}
+  - component: {fileID: 349247111}
   m_Layer: 5
   m_Name: Timer Text
   m_TagString: Untagged
@@ -85049,19 +85046,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &349247108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 349247106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e63cc68f9ac43a241b534d6684a96836, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerText: {fileID: 349247107}
 --- !u!222 &349247109
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -85089,6 +85073,19 @@ RectTransform:
   m_AnchoredPosition: {x: 307, y: 189}
   m_SizeDelta: {x: 234.0948, y: 64.7645}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &349247111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349247106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae1a8b623bac2754d9ca550d8f0362e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 349247107}
 --- !u!1 &364384001
 GameObject:
   m_ObjectHideFlags: 0
@@ -92659,6 +92656,7 @@ CompositeCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364384001}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -92682,7 +92680,8 @@ CompositeCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 1
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_GeometryType: 0
   m_GenerationType: 0
@@ -92729,6 +92728,7 @@ TilemapCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364384001}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -92752,7 +92752,8 @@ TilemapCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
@@ -92914,11 +92915,11 @@ PrefabInstance:
       value: Saw
       objectReference: {fileID: 0}
     - target: {fileID: 8513690841786679081, guid: 4ac6e35ca893904418a7418facaa5b37, type: 3}
-      propertyPath: waypoints.Array.data[0]
+      propertyPath: 'waypoints.Array.data[0]'
       value: 
       objectReference: {fileID: 1625659378}
     - target: {fileID: 8513690841786679081, guid: 4ac6e35ca893904418a7418facaa5b37, type: 3}
-      propertyPath: waypoints.Array.data[1]
+      propertyPath: 'waypoints.Array.data[1]'
       value: 
       objectReference: {fileID: 1576906275}
     m_RemovedComponents: []
@@ -93448,6 +93449,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Personaggio: {fileID: 366131037}
+  seguiAsseX: 1
+  maxY: 0
+  minY: 0
 --- !u!81 &632071866
 AudioListener:
   m_ObjectHideFlags: 0
@@ -93637,11 +93641,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8513690841786679081, guid: 4ac6e35ca893904418a7418facaa5b37, type: 3}
-      propertyPath: waypoints.Array.data[0]
+      propertyPath: 'waypoints.Array.data[0]'
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8513690841786679081, guid: 4ac6e35ca893904418a7418facaa5b37, type: 3}
-      propertyPath: waypoints.Array.data[1]
+      propertyPath: 'waypoints.Array.data[1]'
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -94308,7 +94312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 415, y: -4.999939}
+  m_AnchoredPosition: {x: 415, y: -5}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1056562952
@@ -94657,11 +94661,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3668635370743060908, guid: 79f3cdc460e264a308a3cbfeae1b3947, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.24
+      value: -10.24
       objectReference: {fileID: 0}
     - target: {fileID: 3668635370743060908, guid: 79f3cdc460e264a308a3cbfeae1b3947, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.81
+      value: 5.82
       objectReference: {fileID: 0}
     - target: {fileID: 3668635370743060908, guid: 79f3cdc460e264a308a3cbfeae1b3947, type: 3}
       propertyPath: m_LocalPosition.z
@@ -95486,7 +95490,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e63cc68f9ac43a241b534d6684a96836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerText: {fileID: 349247107}
 --- !u!114 &1658843651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96695,11 +96698,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8513690841786679081, guid: 4ac6e35ca893904418a7418facaa5b37, type: 3}
-      propertyPath: waypoints.Array.data[0]
+      propertyPath: 'waypoints.Array.data[0]'
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8513690841786679081, guid: 4ac6e35ca893904418a7418facaa5b37, type: 3}
-      propertyPath: waypoints.Array.data[1]
+      propertyPath: 'waypoints.Array.data[1]'
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -96827,7 +96830,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -270}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -2, y: -4.999939}
+  m_AnchoredPosition: {x: -2, y: -5}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1987100314
@@ -97154,7 +97157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 510, y: -4.999939}
+  m_AnchoredPosition: {x: 510, y: -5}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2124427022
@@ -97343,6 +97346,14 @@ PrefabInstance:
     - target: {fileID: 2618728544850812023, guid: 2199dc593d8dc414e8b230498cb43161, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.8155556
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279006072834258559, guid: 2199dc593d8dc414e8b230498cb43161, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 56.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279006072834258559, guid: 2199dc593d8dc414e8b230498cb43161, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.69
       objectReference: {fileID: 0}
     - target: {fileID: 7738638628762386402, guid: 2199dc593d8dc414e8b230498cb43161, type: 3}
       propertyPath: m_Name

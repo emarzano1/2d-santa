@@ -32,19 +32,15 @@ public class Finish : MonoBehaviour
                 Play_Leaderboard.SendLeaderboard("TimeScoreHorizontal", Timer.score);
             }
             Timer.elapsedTime = 0.0f;
-            Timer2.elapsedTime = 0.0f;
-            Timer3.elapsedTime = 0.0f;
-            SceneManager.LoadScene(9);
+            SceneManager.LoadScene(10); // scena finale
         } else if(SceneManager.GetActiveScene().buildIndex == 8) {
             if(Timer.score > 0) {
                 Play_Leaderboard.SendLeaderboard("TimeScoreVertical", Timer.score);
             }
             Timer.elapsedTime = 0.0f;
-            Timer2.elapsedTime = 0.0f;
-            Timer3.elapsedTime = 0.0f;
-            SceneManager.LoadScene(9);
+            SceneManager.LoadScene(10); // scena finale
         } else {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // prossimo livello
         }
         
     }

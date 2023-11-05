@@ -15,8 +15,6 @@ public class PauseMenu : MonoBehaviour
    public void Home() {
         SceneManager.LoadScene(2);
         Timer.elapsedTime = 0.0f;
-        Timer2.elapsedTime = 0.0f;
-        Timer3.elapsedTime = 0.0f;
         Time.timeScale = 1;
 
    }
@@ -28,7 +26,7 @@ public class PauseMenu : MonoBehaviour
 
    public void Restart() {
          SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-         Timer.elapsedTime += 3.0f;
+         Timer.elapsedTime += 1.5f;
          Time.timeScale = 1;
    }
 
